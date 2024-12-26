@@ -6,4 +6,19 @@ console.log(greet, typeof greet);
 
 // Functions are objects in Javascript
 
-console.log(typeof null);
+function identifyDataType(value) {
+    if (value === null) {
+        return 'Null';
+    }
+    if (Array.isArray(value)){
+        return 'Array'
+    }
+        return typeof value;
+}
+
+res = identifyDataType([10,20,30]);
+// console.log(res);
+
+console.log(Array.isArray(null)); //false
+console.log(Array.isArray([10,20,30])); //true
+
