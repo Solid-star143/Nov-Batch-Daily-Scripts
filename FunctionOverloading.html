@@ -1,18 +1,19 @@
 <script>
-mul(10,20);//NaN
-mul(10,20,30);//NaN
-mul(10,20,30,40);//240000
-
 function mul(a,b){
-    console.log(a*b);
+    console.log('Multiplication of a,b is:',a*b);
 }
 
 function mul(a,b,c){
-    console.log(a*b*c);
+    console.log('Multiplication of a,b,c is: ',a*b*c);
 }
 
-function mul(a,b,c,d){
-    console.log(a*b*c*d);
-}
- 
+mul(10,20);//Multiplication of a,b is: NaN
+mul(10,20,30);//Multiplication of a,b,c is: 6000
+
+/*
+Javascript do not support Function Overloading because when we try to declared multiple
+functions with same name but different number of parameters then only last declared
+function can be accessed and all other previous functions will become useless
+*/
+
 </script>
