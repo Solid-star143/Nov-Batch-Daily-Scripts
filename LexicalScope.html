@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lexical Scope</title>
+</head>
+<body>
+    <script>
+        var global = 200;
+        console.log("Value of global is:",global);//200
+        // console.log("Value of outer is:",outer);//Error
+        // console.log("Value of inner is:",inner);//Error
+        function Outer(){
+            var outer = 300;
+            console.log("Value of Outer is:",outer);//300
+            console.log("Value of global is:",global);//200
+            // console.log("Value of Inner is:",inner);//Error
+            function Inner(){
+                var inner = 400;
+                console.log("Value of Inner is:",inner);//400
+                console.log("Value of Outer is:",outer);//300
+                console.log("Value of global is:",global);//200
+            }
+            Inner();
+        }
+        Outer();
+    </script>
+</body>
+</html>
