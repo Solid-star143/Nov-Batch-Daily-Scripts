@@ -1,0 +1,10 @@
+body {
+    background-color: antiquewhite;
+    color: green;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: red;
+    
+}
