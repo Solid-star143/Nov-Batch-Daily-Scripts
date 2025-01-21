@@ -11,5 +11,12 @@ functions, such functions are called as Callback Functions.-->
     processGreet((name)=>{console.log('Hello',name)})
 
     //Built-in Higher Order Functions:
-    var arr = 
+    var arr = [10,11,12,13,14,15]
+    var even = arr.filter((ele)=>ele % 2 === 0)
+    console.log(even);//[10,12,14]
+    
+    var square = arr.map(function(ele){
+        return ele * ele
+    })
+    console.log(square);
 </script>
