@@ -26,6 +26,10 @@
         },1000)
     }
 
+    /*When we want to achieve Synchronous like behaviour into
+    asynchronous Programming we have to go with nested calling  of
+    function as shown below, which is called as callback hell.*/
+    
     // All Tasks are Asynchronous Task.
     placeOrder('Shirts',()=>{
         makePayment(2500,()=>{

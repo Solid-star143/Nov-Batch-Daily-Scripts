@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        #msg {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="validate(event)">
+    <label>First Name:</label>
+    <input type="text" id="input-ele">
+    <span id="msg">*</span>
+    <br><br>
+    <button>Submit</button>
+    </form>
+
+    <script>
+        function validate() {
+            event.preventDefault();
+            var name = document.getElementById('input-ele').value;
+            if (name === '') {
+                target.document.getElementById('msg');
+                target.textContent = 'First name should Not be empty..!!';
+            }
+            else if (name.length<2) {
+
+            }
+        }
+
+    </script>
+</body>
+</html>
