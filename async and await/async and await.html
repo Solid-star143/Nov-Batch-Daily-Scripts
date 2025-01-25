@@ -1,0 +1,22 @@
+<script>
+    let p1 = new Promise((resolve, reject)=>  {
+        setTimeout(() => {
+            console.log('Task 2');
+            resolve();
+        },5000)
+    })
+    async function process() {
+        console.log('Task 1');
+        await p1;
+        console.log('Task 3 depends on Task 2(executed first)');
+    }
+    process();
+
+    console.log('Some other Tasks');
+
+    // console.log('Task 1') //Synchronous
+    // setTimeout(()=>console.log('Task 2')); //Asynchronous
+    // console.log('Task 3'); //Synchronous
+
+    // //Synchronous will be executed first.
+</script>
