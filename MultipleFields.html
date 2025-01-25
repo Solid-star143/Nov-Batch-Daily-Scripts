@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validating Multiple Fields</title>
+</head>
+<body>
+    <form id="multiFieldForm">
+        <label>Name:</label>
+        <input type="text" id="name">
+
+        <label>Age:</label>
+        <input type="number" id="age">
+
+        <button onclick="validateAll(event)">Submit</button>
+    </form>
+
+    <script>
+        function validateAll() {
+            event.preventDefault();
+            form = document.getElementById('multiFieldForm');
+            name = form.name.value;
+            age = form.age.value;
+            if (name == '' || age == '') {
+                alert('All Fields are required...!!');
+            }
+            if (isNaN(age) || age < 0) {
+                alert('Age must be a positive number');
+            }
+        }
+        
+    </script>
+</body>
+</html>
